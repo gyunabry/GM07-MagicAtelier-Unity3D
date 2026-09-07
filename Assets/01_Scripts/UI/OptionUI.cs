@@ -16,8 +16,6 @@ public class OptionUI : MonoBehaviour
     [SerializeField] private GameObject saveAndExitPopup;
     [SerializeField] private SaveGameService saveGameService;
 
-    private InputManager inputManager;
-
     public enum EScreenMode
     {
         FullScreen,
@@ -27,8 +25,6 @@ public class OptionUI : MonoBehaviour
 
     private void Awake()
     {
-        inputManager = FindFirstObjectByType<InputManager>();
-
         if (bgmSlider != null)
         {
             bgmSlider.onValueChanged.AddListener(OnBGMVolumeChanged);
@@ -37,22 +33,11 @@ public class OptionUI : MonoBehaviour
         {
             sfxSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
         }
-        //this.gameObject.SetActive(false);
-        
+
     }
 
-    private void OnEnable()
+    private void Start()
     {
-        if (inputManager == null)
-        {
-            inputManager = FindFirstObjectByType<InputManager>();
-        }
-
-        if (inputManager != null)
-        {
-            inputManager.OnCancelPressed += Hide;
-        }
-
         if (saveAndExitPopup != null)
         {
             saveAndExitPopup.SetActive(false);
@@ -77,14 +62,7 @@ public class OptionUI : MonoBehaviour
         }
 
         OnClickChangeWindow();
-    }
-
-    private void OnDisable()
-    {
-        if (inputManager != null)
-        {
-            inputManager.OnCancelPressed -= Hide;
-        }
+        Hide();
     }
 
     public void Show()

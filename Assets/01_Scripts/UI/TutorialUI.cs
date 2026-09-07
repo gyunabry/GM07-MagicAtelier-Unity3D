@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +15,7 @@ public class TutorialUI : MonoBehaviour
 
     private readonly HashSet<int> seenTutorialLevels = new();
     private bool isLoadedGame;
-
+   
     [System.Serializable]
     public struct Tutorials
     {
@@ -26,6 +27,8 @@ public class TutorialUI : MonoBehaviour
     private int currentPopupPanel;
     private int currentPage;
     private int totalPage;
+
+    public bool IsOpen { get; private set; }
 
     private void Awake()
     {
@@ -96,6 +99,7 @@ public class TutorialUI : MonoBehaviour
 
         seenTutorialLevels.Add(tutorials[tutorialIndex].popupLevel);
 
+        IsOpen = true;
         uI_Tutorial.SetActive(true);
 
         for (int i = 0; i < tutorials.Length; i++)
@@ -191,6 +195,7 @@ public class TutorialUI : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX(ESFXType.UI_Close);
 
+        IsOpen = false;
         uI_Tutorial.SetActive(false);
 
         LevelCheck();

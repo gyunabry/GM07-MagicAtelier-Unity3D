@@ -299,6 +299,13 @@ public class CameraModeController : MonoBehaviour
         return Application.isFocused && freeCameraTarget != null && activeEdgeScrollBounds != null;
     }
 
+    public void PrepareAfterTeleport()
+    {
+        FollowPlayer();
+
+        cinemachineCamera.PreviousStateIsValid = false;
+    }
+
     private void OnDestroy()
     {
         if (freeCameraTarget != null)

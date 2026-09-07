@@ -67,7 +67,11 @@ public class Player : MonoBehaviour
         }
         skillPoint += 3;
         nowLevel++;
-        characterPanelController.RefreshAll();
+        
+        if (characterPanelController != null)
+        {
+            characterPanelController.RefreshAll();
+        }
     }
 
     public void RestoreProgress(int savedCurrencyLevel, int savedSkillPoints)

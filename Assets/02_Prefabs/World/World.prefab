@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4659759169016793699}
   - component: {fileID: 1404530242964587265}
   - component: {fileID: 1647351799862419345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 5828048733493667584}
   - component: {fileID: 7763676681953453238}
   - component: {fileID: 2445642023825981295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 8550667294991528936}
   - component: {fileID: 6768607276900120411}
   - component: {fileID: 5573642559275462224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 6237578474589250329}
   - component: {fileID: 9065263436816821719}
   - component: {fileID: 3903857615032942374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 6051880460420551442}
   - component: {fileID: 128767272853857950}
   - component: {fileID: 3613147101143013744}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ GameObject:
   - component: {fileID: 7322004823510534728}
   - component: {fileID: 3935495505676672341}
   - component: {fileID: 3313299566204347163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1069,7 +1069,7 @@ GameObject:
   - component: {fileID: 6843111519035142207}
   - component: {fileID: 2154436277643515038}
   - component: {fileID: 6832185439843247960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 4561513064413046910}
   - component: {fileID: 5541546560285106743}
   - component: {fileID: 3095187684736690868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,7 +1326,7 @@ GameObject:
   - component: {fileID: 5312768470542225236}
   - component: {fileID: 7451352624947308152}
   - component: {fileID: 6807327682188190401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1438,7 +1438,7 @@ GameObject:
   - component: {fileID: 5139856322875375672}
   - component: {fileID: 6836647278456294012}
   - component: {fileID: 2573629356346528653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 8424171254265118017}
   - component: {fileID: 465662314471170154}
   - component: {fileID: 6257417207574289698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1662,7 +1662,7 @@ GameObject:
   - component: {fileID: 4404808594744908173}
   - component: {fileID: 6315462675929626805}
   - component: {fileID: 8836439498035511247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,7 +1774,7 @@ GameObject:
   - component: {fileID: 5980045880279157797}
   - component: {fileID: 1170760248914923139}
   - component: {fileID: 7519926724861247049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1992,7 +1992,7 @@ GameObject:
   - component: {fileID: 6929502960151416290}
   - component: {fileID: 7398236923962758937}
   - component: {fileID: 6644405282168030687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2143,7 +2143,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 55, y: 1, z: 55}
+  m_Size: {x: 40, y: 1, z: 40}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3009139617351418611
 GameObject:
@@ -2247,7 +2247,7 @@ GameObject:
   - component: {fileID: 3261825449806545983}
   - component: {fileID: 4042950403726566193}
   - component: {fileID: 5605007327925134413}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2449,7 +2449,7 @@ GameObject:
   - component: {fileID: 9175787430838551370}
   - component: {fileID: 2671566145238811667}
   - component: {fileID: 6945990547271104716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2561,7 +2561,7 @@ GameObject:
   - component: {fileID: 2761319622333434562}
   - component: {fileID: 3727637804358942682}
   - component: {fileID: 8874393001103650519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2823,7 +2823,7 @@ GameObject:
   - component: {fileID: 4135991532439075237}
   - component: {fileID: 6903832239455216473}
   - component: {fileID: 7718682016791939185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3087,7 +3087,7 @@ GameObject:
   - component: {fileID: 2641460669436858181}
   - component: {fileID: 404174215525024762}
   - component: {fileID: 6422183595043489970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3199,7 +3199,7 @@ GameObject:
   - component: {fileID: 8199790634002624680}
   - component: {fileID: 2532765414346974036}
   - component: {fileID: 611565258501856907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3311,7 +3311,7 @@ GameObject:
   - component: {fileID: 847562384135460019}
   - component: {fileID: 428583333819021217}
   - component: {fileID: 7680129532962773491}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3476,7 +3476,7 @@ GameObject:
   - component: {fileID: 5558541870867028403}
   - component: {fileID: 1237161709957818799}
   - component: {fileID: 7598327206445045066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3588,7 +3588,7 @@ GameObject:
   - component: {fileID: 9102912852382812079}
   - component: {fileID: 6800791420860537627}
   - component: {fileID: 87987315934218376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3852,7 +3852,7 @@ GameObject:
   - component: {fileID: 1054255628991949575}
   - component: {fileID: 1091632393195582601}
   - component: {fileID: 4044314798819296177}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4028,7 +4028,7 @@ GameObject:
   - component: {fileID: 849535023628200247}
   - component: {fileID: 7907118735106432222}
   - component: {fileID: 5834075668112802512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4140,7 +4140,7 @@ GameObject:
   - component: {fileID: 4575810737732071783}
   - component: {fileID: 6101291068761013710}
   - component: {fileID: 1415475238565820192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4252,7 +4252,7 @@ GameObject:
   - component: {fileID: 7723454278049621134}
   - component: {fileID: 9012927028932963720}
   - component: {fileID: 5217636484091999019}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4487,7 +4487,7 @@ GameObject:
   - component: {fileID: 3593422776200685271}
   - component: {fileID: 5248131659518151949}
   - component: {fileID: 442692911560328982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4599,7 +4599,7 @@ GameObject:
   - component: {fileID: 7221901420888269698}
   - component: {fileID: 2808631284237192656}
   - component: {fileID: 2044303816306593863}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4750,7 +4750,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 30, y: 1, z: 30}
+  m_Size: {x: 27, y: 1, z: 27}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6197885695406110679
 GameObject:
@@ -4830,7 +4830,11 @@ MonoBehaviour:
     y: -8
     width: 20
     height: 20
-  blockedAreas: []
+  blockedAreas:
+  - x: 10
+    y: -1
+    width: 2
+    height: 6
 --- !u!1 &6325408436647593371
 GameObject:
   m_ObjectHideFlags: 0
@@ -4843,7 +4847,7 @@ GameObject:
   - component: {fileID: 6358693212269335560}
   - component: {fileID: 7602490881879435751}
   - component: {fileID: 5363189198530960760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5001,7 +5005,7 @@ GameObject:
   - component: {fileID: 3207427819738849817}
   - component: {fileID: 8233587210556841371}
   - component: {fileID: 7265250422572175853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5113,7 +5117,7 @@ GameObject:
   - component: {fileID: 1260856674984485490}
   - component: {fileID: 5374793467623100500}
   - component: {fileID: 8675552144082673465}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5225,7 +5229,7 @@ GameObject:
   - component: {fileID: 1003938520993783372}
   - component: {fileID: 2902279028348884283}
   - component: {fileID: 4899298546781462559}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5337,7 +5341,7 @@ GameObject:
   - component: {fileID: 7901330736993540563}
   - component: {fileID: 8209886941349295526}
   - component: {fileID: 3863665522676025011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5601,7 +5605,7 @@ GameObject:
   - component: {fileID: 6459182745485168242}
   - component: {fileID: 7897222969945236323}
   - component: {fileID: 8016625227827978223}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5937,7 +5941,7 @@ GameObject:
   - component: {fileID: 7817516557784547147}
   - component: {fileID: 2102095322381619690}
   - component: {fileID: 7585226869863254242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6049,7 +6053,7 @@ GameObject:
   - component: {fileID: 5069693761604008342}
   - component: {fileID: 8641294921101871037}
   - component: {fileID: 7220058097739136655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6543,7 +6547,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 30, y: 0, z: 30}
+  m_Size: {x: 27, y: 0, z: 27}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7807622900529830727
 GameObject:
@@ -6689,7 +6693,7 @@ GameObject:
   - component: {fileID: 7242426285988528635}
   - component: {fileID: 5421474203761445521}
   - component: {fileID: 2086093982686417552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6840,7 +6844,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 30, y: 1, z: 30}
+  m_Size: {x: 27, y: 1, z: 27}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8290779946795999478
 GameObject:
@@ -6944,7 +6948,7 @@ GameObject:
   - component: {fileID: 2834856953580740244}
   - component: {fileID: 7235149560063434855}
   - component: {fileID: 2078388608485509917}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_wood_large Variant(Clone) (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7502,6 +7506,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -89
       objectReference: {fileID: 0}
+    - target: {fileID: 2099183679807650953, guid: c37be12c15a81a54898e70d9c096ddd4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4505558473283863261, guid: c37be12c15a81a54898e70d9c096ddd4, type: 3}
       propertyPath: m_LocalPosition.z
       value: -87
@@ -7612,6 +7620,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8459336126722296910, guid: c37be12c15a81a54898e70d9c096ddd4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6538809891501556802}
+    - targetCorrespondingSourceObject: {fileID: 6074812212179671213, guid: c37be12c15a81a54898e70d9c096ddd4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4660491294936881429}
   m_SourcePrefab: {fileID: 100100000, guid: c37be12c15a81a54898e70d9c096ddd4, type: 3}
 --- !u!4 &4759463485530113873 stripped
 Transform:
@@ -7623,6 +7634,32 @@ Grid:
   m_CorrespondingSourceObject: {fileID: 5461986817170038297, guid: c37be12c15a81a54898e70d9c096ddd4, type: 3}
   m_PrefabInstance: {fileID: 157063755787459318}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6223993523471925851 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6074812212179671213, guid: c37be12c15a81a54898e70d9c096ddd4, type: 3}
+  m_PrefabInstance: {fileID: 157063755787459318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4660491294936881429
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6223993523471925851}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.500002, y: 8.000002, z: 12.500004}
+  m_Center: {x: 0.0000009536743, y: 4, z: -0.0000009536743}
 --- !u!1 &8596133381365143224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8459336126722296910, guid: c37be12c15a81a54898e70d9c096ddd4, type: 3}
@@ -9615,6 +9652,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -75
       objectReference: {fileID: 0}
+    - target: {fileID: 2256456940662179844, guid: 78076c8fa7adbd24a84c91965655cdd5, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2289411145123979338, guid: 78076c8fa7adbd24a84c91965655cdd5, type: 3}
       propertyPath: m_LocalPosition.y
       value: -24
@@ -9662,6 +9703,10 @@ PrefabInstance:
     - target: {fileID: 6406246201213467092, guid: 78076c8fa7adbd24a84c91965655cdd5, type: 3}
       propertyPath: m_Name
       value: Grid_Field_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741181073925917161, guid: 78076c8fa7adbd24a84c91965655cdd5, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8152543248839572291, guid: 78076c8fa7adbd24a84c91965655cdd5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9737,7 +9782,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6406246201213467092, guid: 78076c8fa7adbd24a84c91965655cdd5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6086127350674213843}
+    - targetCorrespondingSourceObject: {fileID: 2256456940662179844, guid: 78076c8fa7adbd24a84c91965655cdd5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3590375421527670706}
   m_SourcePrefab: {fileID: 100100000, guid: 78076c8fa7adbd24a84c91965655cdd5, type: 3}
+--- !u!1 &1478111849921047974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2256456940662179844, guid: 78076c8fa7adbd24a84c91965655cdd5, type: 3}
+  m_PrefabInstance: {fileID: 852241653437867426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3590375421527670706
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478111849921047974}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.500002, y: 8.000002, z: 12.500004}
+  m_Center: {x: 0.0000047683716, y: 4, z: -0.0000009536743}
 --- !u!1 &5995500286992620662 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6406246201213467092, guid: 78076c8fa7adbd24a84c91965655cdd5, type: 3}
@@ -15138,6 +15212,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -54
       objectReference: {fileID: 0}
+    - target: {fileID: 3649831877499529485, guid: 3888734eb0bcf3e449a0c6cb0f4ce921, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3741658793639095015, guid: 3888734eb0bcf3e449a0c6cb0f4ce921, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24
@@ -15212,7 +15290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8228583501878443081, guid: 3888734eb0bcf3e449a0c6cb0f4ce921, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8334005784033413591, guid: 3888734eb0bcf3e449a0c6cb0f4ce921, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15256,6 +15334,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3824353845989960711, guid: 3888734eb0bcf3e449a0c6cb0f4ce921, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4504391687675230298}
+    - targetCorrespondingSourceObject: {fileID: 8228583501878443081, guid: 3888734eb0bcf3e449a0c6cb0f4ce921, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6017694117129384061}
   m_SourcePrefab: {fileID: 100100000, guid: 3888734eb0bcf3e449a0c6cb0f4ce921, type: 3}
 --- !u!1 &1759360361920439789 stripped
 GameObject:
@@ -15309,6 +15390,32 @@ Grid:
   m_CorrespondingSourceObject: {fileID: 6956860452358071034, guid: 3888734eb0bcf3e449a0c6cb0f4ce921, type: 3}
   m_PrefabInstance: {fileID: 3276462612493814250}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6866186764769326499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8228583501878443081, guid: 3888734eb0bcf3e449a0c6cb0f4ce921, type: 3}
+  m_PrefabInstance: {fileID: 3276462612493814250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6017694117129384061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866186764769326499}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.500002, y: 8.000002, z: 12.500004}
+  m_Center: {x: 0.0000009536743, y: 4, z: -0.0000009536743}
 --- !u!1001 &3284680661778858066
 PrefabInstance:
   m_ObjectHideFlags: 0
