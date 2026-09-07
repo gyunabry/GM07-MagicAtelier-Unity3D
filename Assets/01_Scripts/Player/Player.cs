@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public float baseAttackDamage;
     public float baseAttackSpeed;
     public float baseAttackDistance;
+    public float skillMoveSpeed;
     public float attackDamage;
     public float attackSpeed;
     public float attackDistance;
@@ -63,7 +64,7 @@ public class Player : MonoBehaviour
             baseAttackSpeed += levelUpStats[nowLevel].attackSpeed;
             baseAttackDistance += levelUpStats[nowLevel].attackDistance;
             moveSpeed += levelUpStats[nowLevel].moveSpeed;
-            navMeshAgent.speed = (3f + moveSpeed);
+            navMeshAgent.speed = (3f + moveSpeed + skillMoveSpeed);
         }
         skillPoint += 3;
         nowLevel++;
@@ -98,7 +99,7 @@ public class Player : MonoBehaviour
 
         if (navMeshAgent != null)
         {
-            navMeshAgent.speed = 3f + moveSpeed;
+            navMeshAgent.speed = 3f + moveSpeed + skillMoveSpeed;
         }
     }
 }

@@ -167,7 +167,8 @@ public class SkillTreeManager : MonoBehaviour
                 effectContext.playerAttack.upgrade[i].projectileCount = 0;
             }
         }
-        effectContext.player.navMeshAgent.speed = 3f;
+        
+        effectContext.player.skillMoveSpeed = 0f;
 
         // 플레이어 인벤토리 수용량 초기화
         PlayerInventory playerInventory = effectContext.player.GetComponent<PlayerInventory>();
@@ -201,6 +202,7 @@ public class SkillTreeManager : MonoBehaviour
         ProductionSkillRegistry.Commit();
         StorageSkillRegistry.Commit();
         RewardSkillRegistry.Commit();
+        effectContext.player.navMeshAgent.speed = 3f + effectContext.player.moveSpeed + effectContext.player.skillMoveSpeed;
     }
 
     public void RestoreLevels(IReadOnlyList<SkillLevelSaveData> savedSkills)
