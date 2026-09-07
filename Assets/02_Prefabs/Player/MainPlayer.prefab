@@ -358,9 +358,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   inventory:
-    capacity: 20
+    capacity: 10
     entries: []
-  transferAnchor: {fileID: 0}
+  transferAnchor: {fileID: 290282447920304668}
 --- !u!114 &2081651568116816715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
   destinationMarker: {fileID: 0}
   groundMask:
     serializedVersion: 2
-    m_Bits: 16704
+    m_Bits: 320
   sampleDistance: 2
   inputManager: {fileID: 0}
   interactionController: {fileID: 7012853964508467644}

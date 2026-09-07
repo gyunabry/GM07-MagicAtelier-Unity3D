@@ -47,7 +47,7 @@ public class BuildingInfoTooltip : MonoBehaviour
 
         if (buildingIcon != null)
         {
-            // buildingIcon.sprite = data.BuildingIcon;
+            buildingIcon.sprite = data.BuildingIcon;
         }
 
         if (buildingName != null)

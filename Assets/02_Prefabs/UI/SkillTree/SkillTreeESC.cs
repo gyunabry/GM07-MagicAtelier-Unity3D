@@ -1,25 +1,9 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class SkillTreeESC : MonoBehaviour
 {
     [SerializeField] private GameObject passivePanel;
     [SerializeField] private GameObject battlePanel;
-
-    InputAction ia;
-
-    private void Awake()
-    {
-        ia = InputSystem.actions.FindAction("Cancel");
-    }
-
-    void Update()
-    {
-        if (ia.WasPressedThisFrame())
-        {
-            Close();
-        }
-    }
 
     public void Open()
     {

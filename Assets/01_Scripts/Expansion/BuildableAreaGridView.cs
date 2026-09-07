@@ -24,6 +24,8 @@ public class BuildableAreaGridView : MonoBehaviour
         {
             buildableArea.UnlockedAreaChanged += RefreshGrid;
         }
+
+        RefreshGrid();
     }
 
     private void OnDisable()

@@ -26,10 +26,31 @@ public class InputManager : MonoBehaviour
     [SerializeField] private LayerMask buildingLayer;
     [SerializeField] private Camera mainCamera;
 
+    [Header("ESC·Î ´ÝÀ» UI")]
+    [SerializeField] private OptionUI optionUI;
+    [SerializeField] private BuildModeController buildModeController;
+    [SerializeField] private CharacterPanelController characterPanel;
+    [SerializeField] private CarrierCommandPanelView carrierCommandPanel;
+    [SerializeField] private SkillTreeESC skillTreeUI;
+    [SerializeField] private TeleportUI teleportUI;
+    [SerializeField] private BuildingUIRouter buildingUIRouter;
+    [SerializeField] private TutorialUI tutorialUI; 
+
     public event Action OnPrimaryClicked;
     public event Action OnSecondaryClicked;
     public event Action OnCancelPressed;
     public event Action<PlacedBuilding> OnBuildingLongPressed;
+
+    private void Awake()
+    {
+        if (optionUI == null) optionUI = FindFirstObjectByType<OptionUI>(FindObjectsInactive.Include);
+        if (buildModeController == null) buildModeController = FindFirstObjectByType<BuildModeController>(FindObjectsInactive.Include);
+        if (characterPanel == null) characterPanel = FindFirstObjectByType<CharacterPanelController>(FindObjectsInactive.Include);
+        if (carrierCommandPanel == null) carrierCommandPanel = FindFirstObjectByType<CarrierCommandPanelView>(FindObjectsInactive.Include);
+        if (skillTreeUI == null) skillTreeUI = FindFirstObjectByType<SkillTreeESC>(FindObjectsInactive.Include);
+        if (teleportUI == null) teleportUI = FindFirstObjectByType<TeleportUI>(FindObjectsInactive.Include);
+        if (buildingUIRouter == null) buildingUIRouter = FindFirstObjectByType<BuildingUIRouter>(FindObjectsInactive.Include);
+    }
 
     private void OnEnable()
     {
@@ -59,8 +80,60 @@ public class InputManager : MonoBehaviour
         if (Keyboard.current != null &&
             Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            OnCancelPressed?.Invoke();
+            HandleEscape();
         }
+    }
+
+    private void HandleEscape()
+    {
+        if (tutorialUI != null && tutorialUI.IsOpen)
+        {
+            tutorialUI.CloseTutorialPopup();
+            return;
+        }
+
+        if (optionUI != null && optionUI.gameObject.activeInHierarchy)
+        {
+            optionUI.Hide();
+            return;
+        }
+
+        if (skillTreeUI != null && skillTreeUI.gameObject.activeInHierarchy)
+        {
+            skillTreeUI.Close();
+            return;
+        }
+
+        if (teleportUI != null && teleportUI.IsOpen)
+        {
+            teleportUI.CloseUI();
+            return;
+        }
+
+        if (characterPanel != null && characterPanel.IsOpen)
+        {
+            characterPanel.Hide();
+            return;
+        }
+
+        if (carrierCommandPanel != null && carrierCommandPanel.IsOpen)
+        {
+            carrierCommandPanel.Hide();
+            return;
+        }
+
+        if (buildingUIRouter != null && buildingUIRouter.TryClose())
+        {
+            return;
+        }
+
+        if (buildModeController != null && buildModeController.IsBuildMode)
+        {
+            OnCancelPressed?.Invoke();
+            return;
+        }
+
+        if (optionUI != null) optionUI.Show();
     }
 
     private void HandlePrimaryPerformed(InputAction.CallbackContext context) 

@@ -33,6 +33,14 @@ public class BuildingUIRouter : MonoBehaviour
         return false;
     }
 
+    public bool TryClose()
+    {
+        if (activeView == null) return false;
+
+        Close();
+        return true;
+    }
+
     public void Close()
     {
         if (activeView == null) return;

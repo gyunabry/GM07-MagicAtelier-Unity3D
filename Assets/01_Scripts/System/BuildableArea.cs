@@ -325,7 +325,36 @@ public class BuildableArea : MonoBehaviour
 
         Gizmos.color = Color.cyan;
 
-        foreach (RectInt area in unlockedAreas)
+        //foreach (RectInt area in unlockedAreas)
+        //{
+        //    for (int x = area.xMin; x < area.xMax; x++)
+        //    {
+        //        for (int depth = area.yMin;
+        //             depth < area.yMax;
+        //             depth++)
+        //        {
+        //            Vector3Int cell =
+        //                new Vector3Int(x, depth, 0);
+
+        //            Vector3 center = grid.GetCellCenterWorld(cell);
+
+        //            center.y = 0.02f;
+
+        //            Gizmos.DrawWireCube(
+        //                center,
+        //                new Vector3(
+        //                    grid.cellSize.x,
+        //                    0.02f,
+        //                    grid.cellSize.y
+        //                )
+        //            );
+        //        }
+        //    }
+        //}
+
+        Gizmos.color = Color.red;
+
+        foreach (RectInt area in blockedAreas)
         {
             for (int x = area.xMin; x < area.xMax; x++)
             {
