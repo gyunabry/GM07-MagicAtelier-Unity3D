@@ -155,7 +155,7 @@ public class CharacterPanelController : MonoBehaviour
         if (attackPower != null) attackPower.text = $"{player.attackDamage + player.baseAttackDamage}";
         if (attackSpeed != null) attackSpeed.text = $"{player.attackSpeed + player.baseAttackSpeed}";
         if (attackRange != null) attackRange.text = $"{player.attackDistance + player.baseAttackDistance}";
-        if (moveSpeed != null) moveSpeed.text = $"{player.moveSpeed + player.navMeshAgent.speed}";
+        if (moveSpeed != null) moveSpeed.text = $"{player.moveSpeed + player.skillMoveSpeed + 3}";
         if (magnetRange != null) magnetRange.text = $"{playerItemCollector.Range:0.##}";
     }
 
