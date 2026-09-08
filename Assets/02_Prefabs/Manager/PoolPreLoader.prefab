@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7119374117894832108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1923986898043015105}
+  - component: {fileID: 5824096366678690144}
+  m_Layer: 0
+  m_Name: PoolPreLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1923986898043015105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119374117894832108}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.01445, y: -0, z: 0.36611}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5824096366678690144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119374117894832108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b67f9bb64fa6f4098905ac17c78088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoolPreLoader
+  enemies: []
+  carrierWorkerPrefab: {fileID: 4163047715311570166, guid: 1599bbb658fdda3479d5ee9219203b84, type: 3}
+  hunterWorkerPrefab: {fileID: 507510004, guid: 8d5a72d7e7d34b14a5780fc483eda907, type: 3}
+  customerPrefab: {fileID: 2026093149321568500, guid: 28e6327173cd4614a8e4c80f57d35ce1, type: 3}
+  dropItemPrefab: {fileID: 3111163843946996393, guid: 1decab4f4452e5b438cde0737873d237, type: 3}
+  attackPointPrefab: {fileID: 3786625189309287409, guid: bbf3284bd517b9b4283e323b24fd189c, type: 3}
+  chasingSicklePrefab: {fileID: 3022906258108465468, guid: 452664a513437a247a050dee21d35cfe, type: 3}
+  fireCirclePrefab: {fileID: -4297715089572210025, guid: 63e25e55f492a4a479d4be47f28ca2e7, type: 3}
+  flowerThornsPrefab: {fileID: 762729780948256457, guid: 808d3b18d5d12d84e86413fcd822f3f0, type: 3}
+  lightningRayPrefab: {fileID: 120163664264632565, guid: ba54e95cd53c71b4aace72f36264fd6c, type: 3}
+  buttonPrefab: {fileID: 789921594385075282, guid: 9c7016746902a7f49a541f37c65f17e9, type: 3}
+  skillTreePopUpPrefab: {fileID: 4772540311454952330, guid: c89695a9c4c98564cbab3d14c5deae0f, type: 3}
+  carrierCount: 0
+  hunterCount: 0
+  customerCount: 0
+  dropItemCount: 50
+  attackPointCount: 50
+  chasingSickleCount: 20
+  fireCircleCount: 20
+  flowerThornsCount: 20
+  lightningRayCount: 20
+  buttonCount: 20
+  skillTreePopUpCount: 20

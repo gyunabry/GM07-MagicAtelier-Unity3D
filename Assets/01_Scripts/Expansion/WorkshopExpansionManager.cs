@@ -1,0 +1,220 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.AI.Navigation;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class WorkshopExpansionManager : MonoBehaviour
+{
+    [Header("확장 데이터")]
+    [SerializeField] private List<WorkshopExpansionDataSO> expansions = new();
+
+    [Header("확장 규칙")]
+    [Tooltip("한 번 확장으로 늘어날 크기")]
+    [SerializeField] private int expansionUnit = 4;
+
+    [Header("시스템")]
+    [SerializeField] private Player player;
+    [SerializeField] private BuildableArea workshopArea;
+    [SerializeField] private NavMeshSurface navMeshSurface;
+
+    [Header("연출")]
+    [SerializeField] private WorkshopExpansionPreview preview;
+    [SerializeField] private WorkshopStageVisualController visualController;
+
+    private RectInt baseBounds;
+    private int currentStage;
+    private bool isPurchasing;
+
+    private WorkshopExpansionDataSO selectedExpansion;
+    private CurrencySystem currencySystem;
+
+    public int CurrentStage => currentStage;
+
+    public WorkshopExpansionDataSO SelectedExpansion => selectedExpansion;
+
+    public event Action StateChanged;
+    public event Action<WorkshopExpansionDataSO> SelectionChanged;
+
+    private void Awake()
+    {
+        if (workshopArea == null) return;
+
+        baseBounds = workshopArea.UnlockedAreas[0];
+
+        currencySystem = CurrencySystem.Instance;
+
+        currentStage = 0;
+    }
+
+    private void Start()
+    {
+        currencySystem = CurrencySystem.Instance;
+    }
+
+    // 목표 확장 영역 계산
+    public RectInt GetBountForStage(int stage)
+    {
+        stage = Mathf.Max(0, stage);
+
+        // 기본 크기에서 추가될 값
+        int delta = expansionUnit * stage;
+
+        // 기본 : -8, -8, 20, 20
+        return new RectInt(
+            baseBounds.x - delta,
+            baseBounds.y - delta,
+            baseBounds.width + delta,
+            baseBounds.height + delta);
+    }
+
+    public ExpansionPurchaseStatus Evaluate(WorkshopExpansionDataSO data)
+    {
+        if (data == null) return default;
+
+        ExpansionBlockReason reasons = ExpansionBlockReason.None;
+
+        // 해당 데이터의 인덱스보다 현재 단계가 높다면 구매한 확장으로 표시
+        if (data.StageIndex <= currentStage)
+        {
+            reasons |= ExpansionBlockReason.AlreadyPurchase;
+        }
+
+        // 해당 확장 데이터의 인덱스가 현재 단계보다 한 단계 높다면 이전 확장 필요
+        if (data.StageIndex > currentStage + 1)
+        {
+            
+            reasons |= ExpansionBlockReason.PreviousExpansionRequired;
+        }
+
+        if (currencySystem == null || currencySystem.Level < data.RequiredLevel)
+        {
+            reasons |= ExpansionBlockReason.LevelRequired;
+        }
+
+        if (currencySystem == null || currencySystem.Money < data.Price)
+        {
+            reasons |= ExpansionBlockReason.NotEnoughMoney;
+        }
+
+        return new ExpansionPurchaseStatus(data.Price, reasons);
+    }
+
+    public bool SelectExpansion(WorkshopExpansionDataSO data)
+    {
+        if (data == null) return false;
+
+        ExpansionPurchaseStatus status = Evaluate(data);
+
+        if (!status.CanPurchase) return false;
+
+        if (preview == null || !preview.Show(data.StageIndex))
+        {
+            return false;
+        }
+
+        selectedExpansion = data;
+
+        SelectionChanged?.Invoke(data);
+        StateChanged?.Invoke();
+
+        return true;
+    }
+
+    public bool TryPurchaseSelected()
+    {
+        if (isPurchasing || selectedExpansion == null)
+        {
+            return false;
+        }
+
+        WorkshopExpansionDataSO data = selectedExpansion;
+        ExpansionPurchaseStatus status = Evaluate(data);
+
+        if (!status.CanPurchase)
+        {
+            StateChanged?.Invoke();
+            return false;
+        }
+
+        RectInt targetBounds = GetBountForStage(data.StageIndex);
+        RectInt[] areasToUnlock = { targetBounds };
+
+        isPurchasing = true;
+
+        if (!currencySystem.TrySpendMoney(data.Price))
+        {
+            isPurchasing = false;
+            StateChanged?.Invoke();
+            return false;
+        }
+
+        preview?.Hide();
+
+        workshopArea.UnlockAreas(areasToUnlock);
+
+        currentStage = data.StageIndex;
+
+        visualController?.ApplyStage(currentStage);
+
+        selectedExpansion = null;
+
+        SelectionChanged?.Invoke(null);
+        StateChanged?.Invoke();
+
+        if (navMeshSurface != null)
+        {
+            StartCoroutine(RebuildNavMesh());
+        }
+
+        isPurchasing = false;
+        return true;
+    }
+
+    public void CancelSelection()
+    {
+        preview?.Hide();
+
+        if (selectedExpansion == null) return;
+
+        selectedExpansion = null;
+
+        SelectionChanged?.Invoke(null);
+        StateChanged?.Invoke();
+    }
+
+    public bool RestoreStage(int stage)
+    {
+        if (workshopArea == null) return false;
+
+        stage = Mathf.Clamp(stage, 0, expansions.Count);
+
+        RectInt targetBounds = GetBountForStage(stage);
+
+        if (!workshopArea.RestoreUnlockedAreas(new[] { targetBounds }))
+        {
+            return false;
+        }
+
+        currentStage = stage;
+        visualController?.ApplyStage(currentStage);
+
+        StateChanged?.Invoke();
+
+        if (stage > 0 && navMeshSurface != null)
+        {
+            StartCoroutine(RebuildNavMesh());
+        }
+
+        return true;
+    }
+
+
+    private IEnumerator RebuildNavMesh()
+    {
+        yield return null;
+       
+        navMeshSurface.BuildNavMesh();
+    }
+}

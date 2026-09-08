@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d7af39524e13c40a224d52046d19a0, type: 3}
+  m_Name: M01
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDataSO
+  enemyId: M01
+  enemyName: "\uD30C\uB2E5 \uBC15\uC950"
+  discription: "\uC219\uC131\uC2DC\uD0AC \uC218\uB85D \uD6A8\uACFC\uAC00 \uAC15\uD574\uC9C4\uB2E4."
+  hp: 210
+  patrolSpeed: 2.5
+  runSpeed: 3
+  reward:
+    drop:
+      item: {fileID: 11400000, guid: e1e92148abe7e6c4e90af86cdd9a8fee, type: 2}
+      amount: 1
+    killExp: 15
+  runStartDistance: 2
+  runEndDistance: 4
